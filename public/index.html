@@ -1,20 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User CRUD</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User CRUD</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="container">
-    <h1>User Management</h1>
-    <form id="userForm">
-      <input type="text" id="name" placeholder="Enter name" required>
-      <button type="submit">Add User</button>
-    </form>
-    <ul id="userList"></ul>
-  </div>
-  <script src="index.js"></script>
+    <div class="container">
+        <h1>User Management</h1>
+        <form id="userForm">
+            <input type="hidden" id="userId" value="">
+            <input type="text" id="name" placeholder="Enter name" required>
+            <input type="email" id="email" placeholder="Enter email" required>
+            <input type="tel" id="phone" placeholder="Enter phone" required>
+            <input type="text" id="address" placeholder="Enter address" required>
+            <input type="text" id="city" placeholder="Enter city" required>
+            <input type="text" id="state" placeholder="Enter state" required>
+            <input type="text" id="zip" placeholder="Enter zip" required>
+            <input type="text" id="country" placeholder="Enter country" required>
+            <input type="text" id="company" placeholder="Enter company" required>
+            <input type="text" id="title" placeholder="Enter title" required>
+            <input type="text" id="website" placeholder="Enter website" required>
+            <button type="submit" id="submitButton">Add User</button>
+        </form>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip</th>
+                    <th>Country</th>
+                    <th>Company</th>
+                    <th>Title</th>
+                    <th>Website</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be populated dynamically -->
+            </tbody>
+        </table>
+    </div>
+    <script src="index.js"></script>
 </body>
+
 </html>
