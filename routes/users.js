@@ -17,4 +17,22 @@ router.post('/', (req, res) => {
   res.status(201).json(newUser);
 });
 
+router.put('/:id', (req, res) => {
+    const user = {
+        id: parseInt(req.params.id),
+        name: req.body.name || 'Updated User',
+    };
+    res.json(user);
+});
+
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
+  });
+
+  app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
+  });
+
 module.exports = router;
